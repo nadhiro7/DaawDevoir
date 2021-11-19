@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des absences</title>
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="form">
+        <div class="logo">
+            <img src="images/photo_2021-11-12_21-01-34.jpg" alt="">
+            <h1>Univ-Constantine2</h1>
+        </div>
+        <h2>Log In</h2>
+        <form id="form" onsubmit="login()">
+            <div class="inp">
+                <label for="email"><i class="fa fa-envelope"></i> Your Email</label>
+                <input type="text" id="email" name="email" placeholder="Email" class="input-Field">
+                <span class="error">Your email invalid</span>
+            </div>
+            <div class="inp">
+                <label for="pass"><i class="fa fa-lock"></i> Password</label>
+                <input type="password" id="password" name="pass" placeholder="Password" class="input-Field">
+                <i  id="show" class="fa fa-eye"></i>
+                <span class="error">Your password incorrect</span>
+            </div>
+            <button type="submit" class="form-Button">Log In</button>
+        </form>
+        <a href="" id="forgot">Forgot your Password? </a>
+        <span>Or</span>
+        <a href="creerCompte.html" id="SignUp">Sign Up</a>
+    </section>
+    <script src="js/Login.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/HomeStyle.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/photo_2021-11-12_21-01-34.jpg" alt="">
+            <p>UNIV-CONSTANTINE2</p>
+        </div>
+        <div class="search">
+            <label for=""><i class="fa fa-search"></i></label>
+            <input type="text" placeholder="Search User">
+        </div>
+        <div class="user">
+            <img src="images/21559020_811653512349623_7858543560993703161_n.png" alt="">
+            <a id="aName" href="">Djabali Nadhir</a>
+        </div>
+    </header>
+    <nav>
+        <div class="menu positionLeft" onclick="menuBar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="#list"><i class="fa fa-user-circle"></i> Users List</a></li>
+            <li><a href=""><i class="fa fa-plus-circle"></i> Add User</a></li>
+            <li><a href=""><i class="fa fa-pencil-square"></i> Modified User</a></li>
+            <li><a href=""><i class="fa fa-trash"></i> Delete User</a></li>
+        </ul>
+    </nav>
+    <section class="profile container">
+        <div>
+            <img src="images/IMG20211116170707.jpg" alt="">
+            <div>
+                <img src="images/21559020_811653512349623_7858543560993703161_n.png" alt="">
+                <p id="name">Djabali Nadhir</p>
+            </div>
+        </div>
+    </section>
+    <section id="list" class="list container">
+        <h2>Users List</h2>
+        <div></div>
+        <div class="users">
+            <div class="head">
+                <p>Id</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>E-mail</p>
+                <p>Password</p>
+                <p>Phone</p>
+                <p>Address</p>
+            </div>
+            <div class="userRow">
+                <p>1</p>
+                <p>Nadhir</p>
+                <p>Djabali</p>
+                <p>nadhir.djabali@gmail.com</p>
+                <p>2021-11-11</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+            <div class="userRow">
+                <p>2</p>
+                <p>Mohammed</p>
+                <p>Ali</p>
+                <p>mohammed.ali@gmail.com</p>
+                <p>2021-11-14</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+            <div class="userRow">
+                <p>3</p>
+                <p>Ahmed</p>
+                <p>Slimani</p>
+                <p>ahmed.slimani@gmail.com</p>
+                <p>2021-11-15</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+            <div class="userRow">
+                <p>4</p>
+                <p>Riyad</p>
+                <p>Mahrez</p>
+                <p>riyad.mahrez@gmail.com</p>
+                <p>2021-11-16</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+            <div class="userRow">
+                <p>5</p>
+                <p>Ousama</p>
+                <p>Mohammady</p>
+                <p>ousama.mohammady@gmail.com</p>
+                <p>2021-11-17</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+            <div class="userRow">
+                <p>6</p>
+                <p>Moussa</p>
+                <p>Brahim</p>
+                <p>moussa.brahim@gmail.com</p>
+                <p>2021-11-17</p>
+                <p>0792408342</p>
+                <p>Lotissement Larbi Tebessi</p>
+            </div>
+        </div>
+    </section>
+    <section class="add container">
+        <h2>Add User</h2>
+        <div></div>
+        <form action="" method="post" id="addForm">
+            <div>
+                <input type="text" name="fname" id="fname" class="input-Field">
+                <label for="fname">First Name</label>
+            </div>
+            <div>
+                <input type="text" name="lname" id="lname" class="input-Field">
+                <label for="lname">Last Name</label>
+            </div>
+            <div>
+                <input type="text" name="email" id="email" class="input-Field">
+                <label for="email">E-mail</label>
+            </div>
+            <div>
+                <input type="text" name="password" id="password" class="input-Field">
+                <label for="password">Password</label>
+            </div>
+            <div>
+                <input type="number" maxlength="10" name="phone" id="phone" class="input-Field">
+                <label for="phone">Phone</label>
+            </div>
+            <div>
+                <input type="text" name="address" id="address" class="input-Field">
+                <label for="address">Address</label>
+            </div>
+            <span style="margin-top: 20px; display: none;"></span>
+            <button type="submit" class="form-Button"><i class="fa fa-plus-circle"> Add</i></button>
+        </form>
+    </section>
+    <section class="deletEdit container">
+        <h2>Edit User</h2>
+        <div></div>
+        <div>
+            Entre the Id that you want to Edit
+            <form action="" id="getUserEdit">
+                <input type="number" class="input-Field">
+                <button type="submit">Get</button>
+            </form>
+        </div>
+        <form action="" style="display: none;" id="editForm">
+            <div>
+                <input type="number" maxlength="10" name="phone" id="phone" class="input-Field">
+                <label for="phone">Phone</label>
+            </div>
+            <div>
+                <input type="text" name="address" id="address" class="input-Field">
+                <label for="address">Address</label>
+            </div>
+            <div>
+                <input type="text" name="email1" id="email1" class="input-Field">
+                <label for="email1">E-mail</label>
+            </div>
+            <div>
+                <input type="text" name="password1" id="password1" class="input-Field">
+                <label for="password1">password</label>
+            </div>
+            <span style="margin-top: 20px; display: none;"></span>
+            <button type="submit" class="form-Button"><i class="fa fa-pencil-square"> Edit</i></button>
+        </form>
+    </section>
+    <section class="deletEdit del container">
+        <h2>Delete User</h2>
+        <div></div>
+        <div>
+            Entre the Id that you want to Remove
+            <form action="" id="getUserDelete">
+                <input type="number" class="input-Field">
+                <button type="submit">Get</button>
+            </form>
+        </div>
+        <h3>User Information:</h3>
+        <span>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </span>
+        <button id="delete" class="form-Button"><i class="fa fa-trash"> Delete</i></button>
+    </section>
+    <footer>
+        <div class="container">
+            <img src="images/photo_2021-11-12_21-01-34.jpg" alt="">
+            <p>UNIV-CONSTANTINE2</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100068577551540" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/startcodingclub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:startcodingclub@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div class="dots" title="Change Website Theme Color">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="images/photo_2021-11-12_21-01-34.jpg" alt="">
+            <p>&copy; Copyright Université Abdelhamid Mehri - Constantine 2.</p>
+        </div>
+    </footer>
+    <script src="js/Home.js"></script>
+</body>
+</html>

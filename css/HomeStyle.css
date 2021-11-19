@@ -1,0 +1,539 @@
+* {
+  transition: 400ms;
+}
+/*   container  */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*  header  */
+header {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0px 1px 7px 0px #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .logo {
+  height: 50px;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+}
+header .logo img {
+  height: 45px;
+  width: 45px;
+  margin-top: 5px;
+}
+header .logo p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-top: 13px;
+}
+header .search {
+  height: 45px;
+  width: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header .search input:focus {
+  outline-color: var(--prColor);
+}
+header .search input {
+  height: 35px;
+  width: 100%;
+  border-radius: 25px;
+  padding-left: 30px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+header .search label {
+  position: absolute;
+  left: 10px;
+}
+header .user {
+  height: 43px;
+  width: 17%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  background-color: #ededed;
+  padding: 5px;
+  border-radius: 20px;
+}
+header .user img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header .user a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #000;
+}
+
+/*  nav  */
+nav {
+  width: 250px;
+  height: calc(100vh - 57px);
+  background-color: transparent;
+  margin-top: 7px;
+  position: fixed;
+}
+nav ul {
+  list-style: none;
+  flex-direction: column;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+  height: 0%;
+}
+nav ul li {
+  padding: 15px 10px 15px 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+nav ul li a .fa {
+  font-size: 20px;
+  color: green;
+}
+nav ul li a:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.398);
+}
+.menu {
+  height: 20px;
+  width: 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+.positionLeft {
+  transform: translate(-90px, 10px);
+}
+.positionRight {
+  transform: translate(90px, 10px);
+}
+.menu span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--prColor);
+}
+.sp3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+}
+.sp1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.sp2 {
+  display: none;
+}
+/*  profile  */
+.profile {
+  margin: 15px auto;
+  position: relative;
+}
+.profile > div > img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+.profile > div > div {
+  position: absolute;
+  top: 220px;
+  right: 5%;
+}
+.profile > div > div > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+.profile > div > div > p {
+  width: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  text-align: center;
+}
+/*  Users List  */
+.list {
+  margin: 115px auto 30px auto;
+  height: max-content;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.535);
+  border-radius: 7px;
+  padding: 10px;
+}
+.deletEdit > div:first-of-type,
+.add > div:first-of-type,
+.list > div:first-of-type {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.list .users {
+  width: 100%;
+  height: max-content;
+}
+.list .users .userRow,
+.list .users .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list .users .userRow p,
+.list .users .head p {
+  font-size: 17px;
+  color: var(--prColor);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+.list .users .userRow p:not(:first-child),
+.list .users .head p:not(:first-child) {
+  flex-basis: 24%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list .users .userRow p:first-child,
+.list .users .head p:first-child {
+  flex-basis: 4%;
+  text-align: center;
+}
+.list .users .userRow p {
+  font-size: 15px;
+  color: #000;
+  border-color: transparent rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2)
+    rgba(0, 0, 0, 0.2);
+  border-width: 1px;
+  border-style: solid;
+}
+/*  Add User  */
+.deletEdit,
+.add {
+  margin: 0 auto 30px auto;
+  height: max-content;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.535);
+  border-radius: 7px;
+  padding: 10px;
+}
+.deletEdit > form,
+.add form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.deletEdit > form div,
+.add form div {
+  flex-basis: 24%;
+  position: relative;
+}
+.deletEdit > form label,
+.add form div label {
+  position: absolute;
+  top: 25px;
+  left: 2px;
+}
+.deletEdit > form div input,
+.add form div input {
+  height: 30px !important;
+  margin-top: 20px;
+}
+.labelFocus {
+  transform: translateY(-25px);
+  color: var(--prColor);
+}
+.deletEdit > form button,
+.add form button {
+  position: relative !important;
+  width: 150px !important;
+  justify-self: flex-end !important;
+  margin-left: auto;
+}
+/*  edit  */
+.deletEdit > div:last-of-type {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  padding: 5px;
+  align-items: center;
+}
+.deletEdit > div:last-of-type form {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.deletEdit > div:last-of-type form input {
+  height: 30px !important;
+}
+.deletEdit > div:last-of-type form button {
+  width: 70px;
+  height: 30px;
+  background-color: var(--prColor);
+  border-radius: 7px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+/*  remove  */
+.deletEdit span {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  color: red;
+}
+.deletEdit > button {
+  width: 20% !important;
+  border-color: red !important;
+  margin-left: 80% !important;
+}
+.deletEdit > button::after,
+.deletEdit > button::before {
+  background-color: red !important;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(3, 145, 3, 0.01);
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.535);
+  padding: 10px;
+  display: flex;
+}
+footer .container {
+  position: relative;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+footer .container img:first-of-type {
+  width: 100px;
+  height: 80px;
+}
+footer .container p:first-of-type {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+footer .container .icon .fa {
+  font-size: 30px;
+  margin: auto 10px;
+  color: var(--prColor);
+}
+footer .container p:last-of-type {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 17px;
+}
+footer .container img:last-of-type {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 45px;
+  height: 38px;
+}
+/*  responsive  */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .search {
+    display: none;
+  }
+  header .logo {
+    width: max-content;
+  }
+  header .user {
+    width: max-content;
+  }
+  header .user {
+    display: none;
+  }
+  nav {
+    z-index: 5;
+  }
+  nav .menu {
+    position: absolute;
+    top: -40px;
+    left: 100%;
+    transform: translateX(30%);
+  }
+  .list .users .head p {
+    font-size: 13px;
+  }
+  .list {
+    overflow-x: scroll;
+  }
+  .list .users {
+    width: 600px;
+    height: max-content;
+  }
+  .list .users .userRow p {
+    font-size: 12px;
+  }
+  .list > div:first-of-type {
+    width: 600px;
+  }
+  .deletEdit > form,
+  .add form {
+    flex-direction: column;
+  }
+  .deletEdit > form div,
+  .add form div {
+    margin-bottom: 21px;
+  }
+  .deletEdit span {
+    flex-direction: column;
+    font-size: 13px;
+  }
+  footer .container img:last-of-type {
+    bottom: 8px;
+    left: 0px;
+  }
+  footer .container p:last-of-type {
+    display: none;
+  }
+  .deletEdit > button {
+    width: 50% !important;
+    border-color: red !important;
+    margin-left: 50% !important;
+  }
+  .deletEdit > div:last-of-type {
+    font-size: 12px;
+  }
+  .deletEdit > form {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .container {
+    width: 85% !important;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  header .search {
+    display: none;
+  }
+  header .logo {
+    width: max-content;
+  }
+  header .user {
+    width: max-content;
+  }
+  nav {
+    z-index: 5;
+  }
+  .list .users .head p {
+    font-size: 13px;
+  }
+  .list .users .userRow p {
+    font-size: 12px;
+  }
+  .deletEdit > form,
+  .add form {
+    flex-direction: column;
+  }
+  .deletEdit > form div,
+  .add form div {
+    margin-bottom: 21px;
+  }
+  .deletEdit span {
+    flex-direction: column;
+  }
+  footer .container img:last-of-type {
+    bottom: 8px;
+    left: 0px;
+  }
+  footer .container p:last-of-type {
+    bottom: 13px;
+    right: -50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 85% !important;
+  }
+  header .search {
+    display: none;
+  }
+  header .logo {
+    width: max-content;
+  }
+  header .user {
+    width: max-content;
+  }
+  nav {
+    z-index: 5;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: calc(100% - 270px) !important;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  header .logo p {
+    font-size: 12px;
+    font-weight: 900;
+  }
+  header .search {
+    width: 53%;
+  }
+  header .user {
+    width: fit-content;
+  }
+  header .logo {
+    width: 260px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 60% !important;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 70% !important;
+  }
+}
